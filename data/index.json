@@ -1,0 +1,14 @@
+{
+    "files": [
+        "kepler.json",
+        "galileo.json",
+        "descartes.json",
+        "fermat.json",
+        "wallis.json",
+        "pascal.json",
+        "huygens.json",
+        "newton.json",
+        "leibniz.json",
+        "bernoulli.json"
+    ]
+}

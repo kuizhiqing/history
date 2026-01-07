@@ -1,0 +1,27 @@
+[
+    {
+        "id": 220,
+        "type": "period",
+        "title": "Christiaan Huygens",
+        "start": "1629-04-14",
+        "end": "1695-07-08",
+        "tags": ["biography", "math", "physics", "astronomy"],
+        "position": "above"
+    },
+    {
+        "id": 221,
+        "type": "event",
+        "title": "Pendulum Clock Invention",
+        "start": "1656-12-25",
+        "tags": ["physics", "invention"],
+        "position": "below"
+    },
+    {
+        "id": 222,
+        "type": "event",
+        "title": "Treatise on Light Published",
+        "start": "1690-01-01",
+        "tags": ["physics", "publication"],
+        "position": "below"
+    }
+]

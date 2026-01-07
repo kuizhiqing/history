@@ -1,0 +1,188 @@
+[
+  {
+    "id": 201,
+    "type": "period",
+    "title": "Johannes Kepler",
+    "start": "1571-12-27",
+    "end": "1630-11-15",
+    "tags": ["biography", "astronomy"],
+    "position": "above"
+  },
+  {
+    "id": 202,
+    "type": "event",
+    "title": "Kepler's Laws (1 & 2)",
+    "start": "1609-01-01",
+    "tags": ["astronomy", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 203,
+    "type": "event",
+    "title": "Kepler's 3rd Law",
+    "start": "1619-01-01",
+    "tags": ["astronomy", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 204,
+    "type": "period",
+    "title": "Galileo Galilei",
+    "start": "1564-02-15",
+    "end": "1642-01-08",
+    "tags": ["biography", "astronomy", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 205,
+    "type": "event",
+    "title": "Sidereus Nuncius",
+    "start": "1610-03-13",
+    "tags": ["astronomy", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 206,
+    "type": "period",
+    "title": "René Descartes",
+    "start": "1596-03-31",
+    "end": "1650-02-11",
+    "tags": ["biography", "math", "philosophy"],
+    "position": "above"
+  },
+  {
+    "id": 207,
+    "type": "event",
+    "title": "La Géométrie (Analytic Geometry)",
+    "start": "1637-06-08",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 208,
+    "type": "period",
+    "title": "Pierre de Fermat",
+    "start": "1607-08-17",
+    "end": "1665-01-12",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 209,
+    "type": "event",
+    "title": "Fermat's Last Theorem (Conjecture)",
+    "start": "1637-01-01",
+    "tags": ["math"],
+    "position": "above"
+  },
+  {
+    "id": 210,
+    "type": "period",
+    "title": "John Wallis",
+    "start": "1616-11-23",
+    "end": "1703-10-28",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 211,
+    "type": "event",
+    "title": "Introduced Infinity Symbol (∞)",
+    "start": "1655-01-01",
+    "tags": ["math"],
+    "position": "below"
+  },
+  {
+    "id": 212,
+    "type": "period",
+    "title": "Blaise Pascal",
+    "start": "1623-06-19",
+    "end": "1662-08-19",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 213,
+    "type": "event",
+    "title": "Pascaline (Calculator)",
+    "start": "1642-01-01",
+    "tags": ["math", "invention"],
+    "position": "above"
+  },
+  {
+    "id": 214,
+    "type": "event",
+    "title": "Pascal's Triangle",
+    "start": "1653-01-01",
+    "tags": ["math", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 215,
+    "type": "period",
+    "title": "Christiaan Huygens",
+    "start": "1629-04-14",
+    "end": "1695-07-08",
+    "tags": ["biography", "math", "physics", "astronomy"],
+    "position": "above"
+  },
+  {
+    "id": 216,
+    "type": "event",
+    "title": "Pendulum Clock Invented",
+    "start": "1656-12-25",
+    "tags": ["physics", "invention"],
+    "position": "below"
+  },
+  {
+    "id": 217,
+    "type": "period",
+    "title": "Isaac Newton",
+    "start": "1643-01-04",
+    "end": "1727-03-31",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 218,
+    "type": "event",
+    "title": "Principia Mathematica",
+    "start": "1687-07-05",
+    "tags": ["math", "physics", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 219,
+    "type": "period",
+    "title": "Gottfried Wilhelm Leibniz",
+    "start": "1646-07-01",
+    "end": "1716-11-14",
+    "tags": ["biography", "math", "philosophy"],
+    "position": "above"
+  },
+  {
+    "id": 220,
+    "type": "event",
+    "title": "First Calculus Publication",
+    "start": "1684-10-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 221,
+    "type": "period",
+    "title": "Jacob Bernoulli",
+    "start": "1654-12-27",
+    "end": "1705-08-16",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 222,
+    "type": "event",
+    "title": "Discovery of Constant 'e'",
+    "start": "1683-01-01",
+    "tags": ["math"],
+    "position": "above"
+  }
+]

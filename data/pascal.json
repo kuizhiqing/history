@@ -1,0 +1,35 @@
+[
+    {
+        "id": 232,
+        "type": "period",
+        "title": "Blaise Pascal",
+        "start": "1623-06-19",
+        "end": "1662-08-19",
+        "tags": ["biography", "math", "physics"],
+        "position": "below"
+    },
+    {
+        "id": 233,
+        "type": "event",
+        "title": "Pascal's Calculator (Pascaline)",
+        "start": "1642-01-01",
+        "tags": ["math", "invention"],
+        "position": "above"
+    },
+    {
+        "id": 234,
+        "type": "event",
+        "title": "Treatise on the Equilibrium of Liquids",
+        "start": "1653-01-01",
+        "tags": ["physics", "publication"],
+        "position": "above"
+    },
+    {
+        "id": 235,
+        "type": "event",
+        "title": "Pascal's Triangle",
+        "start": "1654-01-01",
+        "tags": ["math", "publication"],
+        "position": "below"
+    }
+]

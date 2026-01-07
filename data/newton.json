@@ -1,0 +1,27 @@
+[
+    {
+        "id": 223,
+        "type": "period",
+        "title": "Isaac Newton",
+        "start": "1643-01-04",
+        "end": "1727-03-31",
+        "tags": ["biography", "math", "physics"],
+        "position": "below"
+    },
+    {
+        "id": 224,
+        "type": "event",
+        "title": "Principia Mathematica Published",
+        "start": "1687-07-05",
+        "tags": ["math", "physics", "publication"],
+        "position": "above"
+    },
+    {
+        "id": 225,
+        "type": "event",
+        "title": "Opticks Published",
+        "start": "1704-01-01",
+        "tags": ["physics", "publication"],
+        "position": "above"
+    }
+]

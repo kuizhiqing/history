@@ -1,0 +1,27 @@
+[
+    {
+        "id": 207,
+        "type": "period",
+        "title": "René Descartes",
+        "start": "1596-03-31",
+        "end": "1650-02-11",
+        "tags": ["biography", "math", "philosophy"],
+        "position": "above"
+    },
+    {
+        "id": 208,
+        "type": "event",
+        "title": "Discourse on Method (incl. La Géométrie)",
+        "start": "1637-06-08",
+        "tags": ["math", "publication"],
+        "position": "below"
+    },
+    {
+        "id": 209,
+        "type": "event",
+        "title": "Principles of Philosophy Published",
+        "start": "1644-01-01",
+        "tags": ["philosophy", "publication"],
+        "position": "below"
+    }
+]

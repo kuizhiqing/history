@@ -1,0 +1,27 @@
+[
+    {
+        "id": 213,
+        "type": "period",
+        "title": "John Wallis",
+        "start": "1616-11-23",
+        "end": "1703-10-28",
+        "tags": ["biography", "math"],
+        "position": "above"
+    },
+    {
+        "id": 214,
+        "type": "event",
+        "title": "Introduces ∞ Infinity Symbol",
+        "start": "1655-01-01",
+        "tags": ["math", "symbol"],
+        "position": "below"
+    },
+    {
+        "id": 215,
+        "type": "event",
+        "title": "Arithmetica Infinitorum",
+        "start": "1656-01-01",
+        "tags": ["math", "publication"],
+        "position": "below"
+    }
+]

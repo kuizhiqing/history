@@ -1,0 +1,239 @@
+:root {
+    --bg-color: #f4f4f9;
+    --line-color: #333;
+    --event-color: #007bff;
+    --period-color: #28a745;
+    --text-color: #333;
+    --item-opacity: 0.9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden; /* Main scroll handled by timeline container */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.controls {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.zoom-controls button {
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.zoom-controls button:hover {
+    background-color: #d0d0d0;
+}
+
+.filter-controls {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    background: #eee;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+.filter-label input {
+    margin-right: 6px;
+}
+
+/* Timeline Container (Scrollable Area) */
+.timeline-container {
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: hidden; /* Hide vertical scrollbar mostly */
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    cursor: grab;
+}
+
+.timeline-container:active {
+    cursor: grabbing;
+}
+
+.timeline-content {
+    position: relative;
+    height: 100%;
+    min-width: 100%;
+    /* Width will be set dynamically via JS */
+}
+
+/* Central Axis */
+.axis {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--line-color);
+    z-index: 1;
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: absolute;
+    box-sizing: border-box;
+    transition: left 0.2s ease, width 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+    z-index: 2;
+    white-space: nowrap;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    background-color: #fff; /* Fallback */
+    border: 2px solid #ccc;
+    font-weight: 500;
+}
+
+.connector-line {
+    transition: left 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+}
+
+.tick {
+    transition: left 0.2s ease;
+}
+
+.tick-label {
+    transition: left 0.2s ease;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    z-index: 100 !important; /* Ensure hover is always on top */
+    transform: scale(1.05);
+}
+
+.timeline-item.hidden {
+    display: none;
+}
+
+/* Positioning handled by JS now, but basics remain */
+.timeline-item.above {
+    /* Border color will be set dynamically */
+}
+
+.timeline-item.below {
+    /* Border color will be set dynamically */
+}
+
+/* Specific Types */
+.timeline-item.event {
+    /* Events are "pills" */
+    border-radius: 20px;
+}
+
+.timeline-item.period {
+    /* Periods are rectangles */
+    border-radius: 6px;
+    height: 34px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Text inside colored blocks */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Ticks */
+.tick {
+    position: absolute;
+    top: 50%;
+    width: 1px;
+    height: 10px;
+    background: #ccc;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.tick-label {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(10px);
+    font-size: 10px;
+    color: #888;
+    white-space: nowrap;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-modal:hover {
+    color: #000;
+}
+
+.modal-row {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.modal-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
