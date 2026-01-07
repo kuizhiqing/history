@@ -1,0 +1,574 @@
+[
+  {
+    "id": 1,
+    "type": "period",
+    "title": "Thales of Miletus",
+    "start": "-0624-01-01",
+    "end": "-0546-01-01",
+    "tags": ["biography", "math", "philosophy", "antiquity"],
+    "position": "above"
+  },
+  {
+    "id": 2,
+    "type": "event",
+    "title": "Thales's Theorem",
+    "start": "-0585-05-28",
+    "tags": ["math", "geometry", "antiquity"],
+    "position": "below"
+  },
+  {
+    "id": 3,
+    "type": "period",
+    "title": "Pythagoras",
+    "start": "-0570-01-01",
+    "end": "-0495-01-01",
+    "tags": ["biography", "math", "philosophy", "antiquity"],
+    "position": "below"
+  },
+  {
+    "id": 4,
+    "type": "period",
+    "title": "Euclid",
+    "start": "-0325-01-01",
+    "end": "-0265-01-01",
+    "tags": ["biography", "math", "antiquity"],
+    "position": "above"
+  },
+  {
+    "id": 5,
+    "type": "event",
+    "title": "Euclid's Elements",
+    "start": "-0300-01-01",
+    "tags": ["math", "publication", "antiquity"],
+    "position": "below"
+  },
+  {
+    "id": 6,
+    "type": "period",
+    "title": "Archimedes",
+    "start": "-0287-01-01",
+    "end": "-0212-01-01",
+    "tags": ["biography", "math", "physics", "antiquity"],
+    "position": "below"
+  },
+  {
+    "id": 7,
+    "type": "event",
+    "title": "Archimedes' Principle (Eureka)",
+    "start": "-0250-01-01",
+    "tags": ["physics", "discovery", "antiquity"],
+    "position": "above"
+  },
+  {
+    "id": 10,
+    "type": "period",
+    "title": "Hypatia",
+    "start": "0360-01-01",
+    "end": "0415-03-01",
+    "tags": ["biography", "math", "astronomy", "antiquity"],
+    "position": "above"
+  },
+  {
+    "id": 15,
+    "type": "period",
+    "title": "Brahmagupta",
+    "start": "0598-01-01",
+    "end": "0668-01-01",
+    "tags": ["biography", "math", "astronomy"],
+    "position": "below"
+  },
+  {
+    "id": 16,
+    "type": "event",
+    "title": "Rules for Zero (Brahmasphutasiddhanta)",
+    "start": "0628-01-01",
+    "tags": ["math", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 20,
+    "type": "period",
+    "title": "Al-Khwarizmi",
+    "start": "0780-01-01",
+    "end": "0850-01-01",
+    "tags": ["biography", "math", "algebra"],
+    "position": "above"
+  },
+  {
+    "id": 21,
+    "type": "event",
+    "title": "The Compendious Book on Calculation by Completion and Balancing",
+    "start": "0820-01-01",
+    "tags": ["math", "publication", "algebra"],
+    "position": "below"
+  },
+  {
+    "id": 25,
+    "type": "period",
+    "title": "Omar Khayyam",
+    "start": "1048-05-18",
+    "end": "1131-12-04",
+    "tags": ["biography", "math", "poetry", "astronomy"],
+    "position": "below"
+  },
+  {
+    "id": 30,
+    "type": "period",
+    "title": "Fibonacci",
+    "start": "1170-01-01",
+    "end": "1250-01-01",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 31,
+    "type": "event",
+    "title": "Liber Abaci (Book of Calculation)",
+    "start": "1202-01-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 40,
+    "type": "period",
+    "title": "Gerolamo Cardano",
+    "start": "1501-09-24",
+    "end": "1576-09-21",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 41,
+    "type": "event",
+    "title": "Ars Magna (Solution to Cubic/Quartic)",
+    "start": "1545-01-01",
+    "tags": ["math", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 201,
+    "type": "period",
+    "title": "Johannes Kepler",
+    "start": "1571-12-27",
+    "end": "1630-11-15",
+    "tags": ["biography", "astronomy"],
+    "position": "above"
+  },
+  {
+    "id": 204,
+    "type": "period",
+    "title": "Galileo Galilei",
+    "start": "1564-02-15",
+    "end": "1642-01-08",
+    "tags": ["biography", "astronomy", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 206,
+    "type": "period",
+    "title": "René Descartes",
+    "start": "1596-03-31",
+    "end": "1650-02-11",
+    "tags": ["biography", "math", "philosophy"],
+    "position": "above"
+  },
+  {
+    "id": 207,
+    "type": "event",
+    "title": "La Géométrie",
+    "start": "1637-06-08",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 208,
+    "type": "period",
+    "title": "Pierre de Fermat",
+    "start": "1607-08-17",
+    "end": "1665-01-12",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 210,
+    "type": "period",
+    "title": "John Wallis",
+    "start": "1616-11-23",
+    "end": "1703-10-28",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 212,
+    "type": "period",
+    "title": "Blaise Pascal",
+    "start": "1623-06-19",
+    "end": "1662-08-19",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 215,
+    "type": "period",
+    "title": "Christiaan Huygens",
+    "start": "1629-04-14",
+    "end": "1695-07-08",
+    "tags": ["biography", "math", "physics"],
+    "position": "above"
+  },
+  {
+    "id": 217,
+    "type": "period",
+    "title": "Isaac Newton",
+    "start": "1643-01-04",
+    "end": "1727-03-31",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 218,
+    "type": "event",
+    "title": "Principia Mathematica",
+    "start": "1687-07-05",
+    "tags": ["math", "physics", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 219,
+    "type": "period",
+    "title": "Gottfried Wilhelm Leibniz",
+    "start": "1646-07-01",
+    "end": "1716-11-14",
+    "tags": ["biography", "math", "philosophy"],
+    "position": "above"
+  },
+  {
+    "id": 220,
+    "type": "event",
+    "title": "First Calculus Publication",
+    "start": "1684-10-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 221,
+    "type": "period",
+    "title": "Jacob Bernoulli",
+    "start": "1654-12-27",
+    "end": "1705-08-16",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 300,
+    "type": "period",
+    "title": "Leonhard Euler",
+    "start": "1707-04-15",
+    "end": "1783-09-18",
+    "tags": ["biography", "math", "physics"],
+    "position": "above"
+  },
+  {
+    "id": 301,
+    "type": "event",
+    "title": "Euler's Identity (e^ix)",
+    "start": "1748-01-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 305,
+    "type": "period",
+    "title": "Joseph-Louis Lagrange",
+    "start": "1736-01-25",
+    "end": "1813-04-10",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 310,
+    "type": "period",
+    "title": "Pierre-Simon Laplace",
+    "start": "1749-03-23",
+    "end": "1827-03-05",
+    "tags": ["biography", "math", "astronomy"],
+    "position": "above"
+  },
+  {
+    "id": 320,
+    "type": "period",
+    "title": "Carl Friedrich Gauss",
+    "start": "1777-04-30",
+    "end": "1855-02-23",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 321,
+    "type": "event",
+    "title": "Disquisitiones Arithmeticae",
+    "start": "1801-01-01",
+    "tags": ["math", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 330,
+    "type": "period",
+    "title": "Augustin-Louis Cauchy",
+    "start": "1789-08-21",
+    "end": "1857-05-23",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 335,
+    "type": "period",
+    "title": "Niels Henrik Abel",
+    "start": "1802-08-05",
+    "end": "1829-04-06",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 340,
+    "type": "period",
+    "title": "Évariste Galois",
+    "start": "1811-10-25",
+    "end": "1832-05-31",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 345,
+    "type": "period",
+    "title": "Ada Lovelace",
+    "start": "1815-12-10",
+    "end": "1852-11-27",
+    "tags": ["biography", "math", "cs"],
+    "position": "below"
+  },
+  {
+    "id": 346,
+    "type": "event",
+    "title": "First Computer Algorithm",
+    "start": "1843-01-01",
+    "tags": ["math", "cs", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 350,
+    "type": "period",
+    "title": "Bernhard Riemann",
+    "start": "1826-09-17",
+    "end": "1866-07-20",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 351,
+    "type": "event",
+    "title": "Riemann Hypothesis",
+    "start": "1859-11-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 360,
+    "type": "period",
+    "title": "Georg Cantor",
+    "start": "1845-03-03",
+    "end": "1918-01-06",
+    "tags": ["biography", "math", "set-theory"],
+    "position": "below"
+  },
+  {
+    "id": 365,
+    "type": "period",
+    "title": "Sofia Kovalevskaya",
+    "start": "1850-01-15",
+    "end": "1891-02-10",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 370,
+    "type": "period",
+    "title": "Henri Poincaré",
+    "start": "1854-04-29",
+    "end": "1912-07-17",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 380,
+    "type": "period",
+    "title": "David Hilbert",
+    "start": "1862-01-23",
+    "end": "1943-02-14",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 381,
+    "type": "event",
+    "title": "Hilbert's Problems",
+    "start": "1900-08-08",
+    "tags": ["math", "speech"],
+    "position": "below"
+  },
+  {
+    "id": 390,
+    "type": "period",
+    "title": "Emmy Noether",
+    "start": "1882-03-23",
+    "end": "1935-04-14",
+    "tags": ["biography", "math", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 400,
+    "type": "period",
+    "title": "Srinivasa Ramanujan",
+    "start": "1887-12-22",
+    "end": "1920-04-26",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 410,
+    "type": "period",
+    "title": "John von Neumann",
+    "start": "1903-12-28",
+    "end": "1957-02-08",
+    "tags": ["biography", "math", "cs", "physics"],
+    "position": "below"
+  },
+  {
+    "id": 420,
+    "type": "period",
+    "title": "Kurt Gödel",
+    "start": "1906-04-28",
+    "end": "1978-01-14",
+    "tags": ["biography", "math", "logic"],
+    "position": "above"
+  },
+  {
+    "id": 421,
+    "type": "event",
+    "title": "Incompleteness Theorems",
+    "start": "1931-01-01",
+    "tags": ["math", "logic", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 430,
+    "type": "period",
+    "title": "Alan Turing",
+    "start": "1912-06-23",
+    "end": "1954-06-07",
+    "tags": ["biography", "math", "cs", "logic"],
+    "position": "below"
+  },
+  {
+    "id": 431,
+    "type": "event",
+    "title": "Turing Machine Concept",
+    "start": "1936-01-01",
+    "tags": ["math", "cs", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 440,
+    "type": "period",
+    "title": "John Nash",
+    "start": "1928-06-13",
+    "end": "2015-05-23",
+    "tags": ["biography", "math", "economics"],
+    "position": "above"
+  },
+  {
+    "id": 441,
+    "type": "event",
+    "title": "Nash Equilibrium",
+    "start": "1950-01-01",
+    "tags": ["math", "economics"],
+    "position": "below"
+  },
+  {
+    "id": 450,
+    "type": "period",
+    "title": "Paul Erdős",
+    "start": "1913-03-26",
+    "end": "1996-09-20",
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 460,
+    "type": "period",
+    "title": "Benoit Mandelbrot",
+    "start": "1924-11-20",
+    "end": "2010-10-14",
+    "tags": ["biography", "math", "fractals"],
+    "position": "above"
+  },
+  {
+    "id": 461,
+    "type": "event",
+    "title": "The Fractal Geometry of Nature",
+    "start": "1982-01-01",
+    "tags": ["math", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 470,
+    "type": "period",
+    "title": "Andrew Wiles",
+    "start": "1953-04-11",
+    "end": null,
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 471,
+    "type": "event",
+    "title": "Proof of Fermat's Last Theorem",
+    "start": "1994-10-01",
+    "tags": ["math", "discovery"],
+    "position": "above"
+  },
+  {
+    "id": 480,
+    "type": "period",
+    "title": "Maryam Mirzakhani",
+    "start": "1977-05-12",
+    "end": "2017-07-14",
+    "tags": ["biography", "math"],
+    "position": "above"
+  },
+  {
+    "id": 481,
+    "type": "event",
+    "title": "Fields Medal (First Woman)",
+    "start": "2014-08-13",
+    "tags": ["math", "honor"],
+    "position": "below"
+  },
+  {
+    "id": 490,
+    "type": "period",
+    "title": "Grigori Perelman",
+    "start": "1966-06-13",
+    "end": null,
+    "tags": ["biography", "math"],
+    "position": "below"
+  },
+  {
+    "id": 491,
+    "type": "event",
+    "title": "Proof of Poincaré Conjecture",
+    "start": "2002-11-11",
+    "tags": ["math", "discovery"],
+    "position": "above"
+  }
+]

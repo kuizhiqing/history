@@ -5,7 +5,7 @@ export class Timeline {
         this.data = this.parseData(data);
         this.onEventClick = onEventClick || (() => {});
         
-        // Extended Palette with more variety (Material Design & standard vibrant sets)
+        // Extended Palette
         this.colors = [
             '#F44336', '#E91E63', '#9C27B0', '#673AB7', '#3F51B5', 
             '#2196F3', '#03A9F4', '#00BCD4', '#009688', '#4CAF50', 
@@ -21,18 +21,33 @@ export class Timeline {
         ];
         this.tagColors = {};
 
+        // DOM Structure Setup
+        this.content.innerHTML = '';
+        this.axis = document.createElement('div');
+        this.axis.className = 'axis';
+        this.content.appendChild(this.axis);
+
+        this.ticksContainer = document.createElement('div');
+        this.ticksContainer.className = 'ticks-container';
+        this.content.appendChild(this.ticksContainer);
+        
+        this.itemsContainer = document.createElement('div');
+        this.itemsContainer.className = 'items-container';
+        this.content.appendChild(this.itemsContainer);
+
+        this.itemElements = new Map(); // Cache for item DOM elements
+
         this.minDate = this.getMinDate();
         this.maxDate = this.getMaxDate();
         // Add padding
-        this.minDate.setDate(this.minDate.getDate() - 365); // Add a year buffer
+        this.minDate.setDate(this.minDate.getDate() - 365); 
         this.maxDate.setDate(this.maxDate.getDate() + 365);
 
-        // Auto-calculate initial zoom to fit screen (roughly)
+        // Auto-calculate initial zoom
         const totalDays = (this.maxDate - this.minDate) / (1000 * 60 * 60 * 24);
         const containerWidth = this.container.clientWidth || 1200;
         let initialZoom = containerWidth / totalDays;
         
-        // Clamp initial zoom
         this.minZoom = 0.01; 
         this.maxZoom = 200;
         this.zoomLevel = Math.max(this.minZoom, initialZoom);
@@ -61,8 +76,6 @@ export class Timeline {
     }
 
     getItemColor(item) {
-        // Generate a hash based on the item's unique ID or Title to ensure
-        // the color is random per-item but stable across renders.
         const uniqueKey = item.id ? item.id.toString() : (item.title + item.start);
         const hash = Math.abs(this._hashString(uniqueKey));
         return this.colors[hash % this.colors.length];
@@ -73,7 +86,8 @@ export class Timeline {
             return {
                 ...item,
                 startDate: new Date(item.start),
-                endDate: item.end ? new Date(item.end) : null
+                endDate: item.end ? new Date(item.end) : null,
+                uniqueId: item.id || Math.random().toString(36).substr(2, 9)
             };
         }).sort((a, b) => a.startDate - b.startDate);
     }
@@ -86,6 +100,10 @@ export class Timeline {
             }
         });
         return Array.from(tags);
+    }
+
+    getUniqueTags() {
+        return this.tags;
     }
 
     getMinDate() {
@@ -104,35 +122,55 @@ export class Timeline {
         return diffDays * this.zoomLevel;
     }
 
+    pixelToDate(px) {
+        const diffDays = px / this.zoomLevel;
+        const diffTime = diffDays * (1000 * 60 * 60 * 24);
+        return new Date(this.minDate.getTime() + diffTime);
+    }
+
     setZoom(level) {
         this.zoomLevel = Math.max(this.minZoom, Math.min(this.maxZoom, level));
+        this.render();
     }
 
     zoomIn() {
-        const targetZoom = this.zoomLevel * 1.2;
-        this.animateZoom(targetZoom);
+        this.animateZoom(this.zoomLevel * 1.5);
     }
 
     zoomOut() {
-        const targetZoom = this.zoomLevel / 1.2;
-        this.animateZoom(targetZoom);
+        this.animateZoom(this.zoomLevel / 1.5);
     }
 
     animateZoom(targetZoom) {
         const clampedTarget = Math.max(this.minZoom, Math.min(this.maxZoom, targetZoom));
         const startZoom = this.zoomLevel;
         const delta = clampedTarget - startZoom;
-        const duration = 300; // ms
+        const duration = 400; // ms
         let startTime = null;
+
+        // Center preservation
+        const containerCenter = this.container.clientWidth / 2;
+        const centerDate = this.pixelToDate(this.container.scrollLeft + containerCenter);
 
         const step = (timestamp) => {
             if (!startTime) startTime = timestamp;
             const elapsed = timestamp - startTime;
             const progress = Math.min(elapsed / duration, 1);
             
-            // Easing function (ease-out)
-            const ease = 1 - Math.pow(1 - progress, 2);
+            // Easing (easeInOutQuad)
+            const ease = progress < .5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+            
             this.zoomLevel = startZoom + (delta * ease);
+            
+            // 1. Update width first to prevent scroll clamping
+            const totalDays = (this.maxDate - this.minDate) / (1000 * 60 * 60 * 24);
+            this.content.style.width = `${totalDays * this.zoomLevel}px`;
+
+            // 2. Adjust scroll to keep centerDate in center
+            const newCenterPx = this.dateToPixel(centerDate);
+            this.container.scrollLeft = newCenterPx - containerCenter;
+
+            // 3. Render (Items + Ticks)
             this.render();
 
             if (progress < 1) {
@@ -183,23 +221,17 @@ export class Timeline {
         });
     }
 
-    // New Stack Logic
     assignStackLevels(filteredItems) {
         // Enforce Layout: Periods Above, Events Below
         filteredItems.forEach(item => {
-            if (item.type === 'period') {
-                item.position = 'above';
-            } else {
-                item.position = 'below';
-            }
+            item.position = item.type === 'period' ? 'above' : 'below';
         });
 
-        // Separate by position
         const aboveItems = filteredItems.filter(i => i.position === 'above');
         const belowItems = filteredItems.filter(i => i.position === 'below');
 
         const assign = (items) => {
-            const levels = []; // Array of end pixels for each level
+            const levels = []; 
             items.forEach(item => {
                 const startPx = this.dateToPixel(item.startDate);
                 let endPx;
@@ -207,15 +239,11 @@ export class Timeline {
                 if (item.type === 'period' && item.endDate) {
                     endPx = this.dateToPixel(item.endDate);
                 } else {
-                    // For events, estimate width based on text length roughly
-                    // Heuristic: 140px for title + padding to be safe
                     endPx = startPx + 140; 
                 }
                 
-                // Add padding between items
-                const itemEndWithPadding = endPx + 10; // Tight padding
+                const itemEndWithPadding = endPx + 10;
 
-                // Find first level that is free
                 let levelIndex = -1;
                 for (let i = 0; i < levels.length; i++) {
                     if (levels[i] < startPx) {
@@ -239,10 +267,6 @@ export class Timeline {
     }
 
     render() {
-        const axis = this.content.querySelector('.axis');
-        this.content.innerHTML = '';
-        this.content.appendChild(axis);
-
         const totalDays = (this.maxDate - this.minDate) / (1000 * 60 * 60 * 24);
         const totalWidth = totalDays * this.zoomLevel;
         this.content.style.width = `${totalWidth}px`;
@@ -252,102 +276,147 @@ export class Timeline {
         });
 
         this.assignStackLevels(filteredItems);
+        this.renderItems(filteredItems);
+        this.renderTicks(totalDays);
+    }
+
+    renderItems(filteredItems) {
+        // Mark all current elements as potentially disposable
+        const activeIds = new Set();
 
         filteredItems.forEach(item => {
-            const el = document.createElement('div');
+            activeIds.add(item.uniqueId);
+            let el = this.itemElements.get(item.uniqueId);
+            let line = null;
+
+            if (!el) {
+                // Create new Item
+                el = document.createElement('div');
+                line = document.createElement('div');
+                line.className = 'connector-line';
+                
+                // Add click listener
+                el.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.onEventClick(item, e);
+                });
+
+                this.itemsContainer.appendChild(line);
+                this.itemsContainer.appendChild(el);
+                
+                // Store both element and line
+                el._lineElement = line;
+                this.itemElements.set(item.uniqueId, el);
+            } else {
+                line = el._lineElement;
+            }
+
+            // Update content/styles
             el.className = `timeline-item ${item.type} ${item.position}`;
             el.textContent = item.title;
             
-            // Apply Dynamic Colors
             const color = this.getItemColor(item);
             if (item.type === 'event') {
                 el.style.backgroundColor = '#fff';
                 el.style.color = '#333';
                 el.style.borderColor = color;
                 el.style.borderWidth = '3px';
-            } else { // period
+            } else { 
                 el.style.backgroundColor = color;
                 el.style.borderColor = color;
-                // Text color already white in CSS for periods
             }
-
-            // Add click listener
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.onEventClick(item);
-            });
 
             const startPx = this.dateToPixel(item.startDate);
             el.style.left = `${startPx}px`;
 
             if (item.type === 'period' && item.endDate) {
                 const endPx = this.dateToPixel(item.endDate);
-                const width = Math.max(endPx - startPx, 10); // Ensure min width is visible
+                const width = Math.max(endPx - startPx, 10); 
                 el.style.width = `${width}px`;
+            } else {
+                el.style.width = 'auto'; // Reset if it was reused from a period
             }
 
             // Stack positioning
             const level = item._stackLevel || 0;
-            const baseOffset = 25; // Compact base offset
-            const levelHeight = 38; // Compact level height
+            const baseOffset = 25; 
+            const levelHeight = 38; 
             const offset = baseOffset + (level * levelHeight);
 
-            // Create connector line
-            const line = document.createElement('div');
-            line.className = 'connector-line';
-            line.style.position = 'absolute';
+            // Update connector line
             line.style.left = `${startPx}px`;
-            line.style.width = '2px';
             line.style.height = `${offset}px`;
-            line.style.backgroundColor = color; // Match item color
+            line.style.backgroundColor = color;
             line.style.opacity = '0.5';
-            line.style.zIndex = '1';
 
             if (item.position === 'above') {
                 el.style.bottom = `calc(50% + ${offset}px)`;
+                el.style.top = 'auto';
                 line.style.bottom = '50%';
+                line.style.top = 'auto';
             } else {
                 el.style.top = `calc(50% + ${offset}px)`;
+                el.style.bottom = 'auto';
                 line.style.top = '50%';
+                line.style.bottom = 'auto';
             }
             
-            this.content.appendChild(line);
-            this.content.appendChild(el);
+            el.style.display = 'block';
+            line.style.display = 'block';
         });
 
-        this.renderTicks(totalDays);
+        // Hide (don't delete) items that are filtered out to save GC
+        this.itemElements.forEach((el, id) => {
+            if (!activeIds.has(id)) {
+                el.style.display = 'none';
+                if (el._lineElement) el._lineElement.style.display = 'none';
+            }
+        });
     }
 
     renderTicks(totalDays) {
-        // Clear old ticks first if any (actually render clears innerHTML so we are good)
+        // Ticks are cleared because their quantity changes drastically
+        this.ticksContainer.innerHTML = '';
         
         let step = 1; 
-        let labelFormat = 'day'; // day, month, year
+        let labelFormat = 'day';
 
         if (this.zoomLevel >= 20) {
-            step = 1; // 1 day
+            step = 1; 
             labelFormat = 'day';
         } else if (this.zoomLevel >= 5) {
-            step = 7; // 1 week
+            step = 7; 
             labelFormat = 'day';
         } else if (this.zoomLevel >= 1) {
-            step = 30; // ~1 month
+            step = 30; 
             labelFormat = 'month';
         } else if (this.zoomLevel >= 0.1) {
-            step = 365; // 1 year
+            step = 365; 
             labelFormat = 'year';
         } else {
-            step = 365 * 10; // 10 years
+            step = 365 * 10; 
             labelFormat = 'year';
         }
         
-        for (let i = 0; i <= totalDays; i += step) {
+        // Optimization: Only render visible ticks
+        const viewportLeft = this.container.scrollLeft;
+        const viewportRight = viewportLeft + this.container.clientWidth;
+        
+        const startDay = Math.floor(viewportLeft / this.zoomLevel);
+        const endDay = Math.ceil(viewportRight / this.zoomLevel);
+        
+        // Clamp to valid range
+        const loopStart = Math.max(0, startDay - 50); // Buffer
+        const loopEnd = Math.min(totalDays, endDay + 50);
+
+        // Align loop start to step
+        const alignedStart = loopStart - (loopStart % step);
+
+        for (let i = alignedStart; i <= loopEnd; i += step) {
             const current = new Date(this.minDate);
             current.setDate(current.getDate() + i);
             
-            const px = this.dateToPixel(current);
-            
-            // Skip if out of bounds (though loop handles it)
+            const px = i * this.zoomLevel; 
             
             const tick = document.createElement('div');
             tick.className = 'tick';
@@ -365,7 +434,7 @@ export class Timeline {
             }
             
             tick.appendChild(label);
-            this.content.appendChild(tick);
+            this.ticksContainer.appendChild(tick);
         }
     }
 }
