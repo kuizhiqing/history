@@ -1,0 +1,16 @@
+# GitHub Pages configuration
+# Required for GitHub Pages to serve static files correctly
+
+title: Mathematics History Timeline
+description: Interactive timeline of mathematical history
+
+# Build settings
+build:
+  publish_dir: .
+
+# Theme settings (optional)
+remote_theme: pages-themes/cayman@v0.2.0
+
+# Plugins (optional)
+plugins:
+  - jekyll-remote-theme
