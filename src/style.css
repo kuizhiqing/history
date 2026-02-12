@@ -1,126 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --bg-color: #f4f4f9;
-    --line-color: #333;
-    --event-color: #007bff;
-    --period-color: #28a745;
-    --text-color: #333;
-    --item-opacity: 0.9;
+    /* Modern gradient background */
+    --bg-gradient-start: #0f172a;
+    --bg-gradient-end: #1e293b;
+
+    /* Accent colors */
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary-color: #8b5cf6;
+    --accent-color: #06b6d4;
+
+    /* Surface colors */
+    --surface-bg: rgba(30, 41, 59, 0.8);
+    --surface-border: rgba(148, 163, 184, 0.2);
+    --surface-hover: rgba(51, 65, 85, 0.9);
+
+    /* Text colors */
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+
+    /* Timeline colors */
+    --line-color: rgba(148, 163, 184, 0.3);
+    --event-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --event-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --event-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --event-gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --event-gradient-5: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --event-gradient-6: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+
+    /* Animation durations */
+    --transition-fast: 150ms;
+    --transition-base: 250ms;
+    --transition-slow: 350ms;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    overflow: hidden; /* Main scroll handled by timeline container */
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+* {
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    color: var(--text-primary);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+/* Animated background effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Header with controls */
 .controls {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    background: var(--surface-bg);
+    backdrop-filter: blur(20px);
+    padding: 20px 30px;
+    margin: 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--surface-border);
     z-index: 10;
     flex-shrink: 0;
     display: flex;
-    gap: 20px;
+    gap: 24px;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
 }
 
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Timeline selector */
 .timeline-selector {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .timeline-selector label {
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--text-secondary);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .timeline-selector select {
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
+    padding: 10px 16px;
+    border: 1px solid var(--surface-border);
+    border-radius: 8px;
+    background: rgba(51, 65, 85, 0.6);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
     cursor: pointer;
     font-size: 14px;
+    font-weight: 500;
+    transition: all var(--transition-base) ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23cbd5e1' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
 }
 
 .timeline-selector select:hover {
-    border-color: #999;
+    border-color: var(--primary-color);
+    background: rgba(51, 65, 85, 0.8);
 }
 
 .timeline-selector select:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Zoom controls */
+.zoom-controls {
+    display: flex;
+    gap: 8px;
 }
 
 .zoom-controls button {
-    padding: 8px 12px;
-    margin-right: 10px;
+    padding: 10px 16px;
     cursor: pointer;
-    background-color: #e0e0e0;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all var(--transition-base) ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .zoom-controls button:hover {
-    background-color: #d0d0d0;
+    background: rgba(59, 130, 246, 0.3);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
-.filter-controls {
-    margin-top: 10px;
+.zoom-controls button:active {
+    transform: translateY(0);
+}
+
+/* Filter container */
+#filterContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
 }
 
-.filter-label {
-    display: flex;
+#filterContainer label {
+    display: inline-flex;
     align-items: center;
     cursor: pointer;
     user-select: none;
-    background: #eee;
-    padding: 4px 8px;
-    border-radius: 12px;
-    font-size: 0.9em;
+    background: rgba(51, 65, 85, 0.5);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    border: 1px solid var(--surface-border);
+    transition: all var(--transition-fast) ease;
+    font-weight: 500;
 }
 
-.filter-label input {
+#filterContainer label:hover {
+    background: rgba(51, 65, 85, 0.8);
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+#filterContainer input {
     margin-right: 6px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
 }
 
-/* Timeline Container (Scrollable Area) */
+/* Timeline Container */
 .timeline-container {
     flex-grow: 1;
     overflow-x: auto;
-    overflow-y: hidden; /* Hide vertical scrollbar mostly */
+    overflow-y: hidden;
     position: relative;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background: var(--surface-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--surface-border);
+    margin: 0 20px 20px 20px;
     cursor: grab;
+    animation: fadeIn 0.6s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .timeline-container:active {
     cursor: grabbing;
 }
 
+/* Custom scrollbar */
+.timeline-container::-webkit-scrollbar {
+    height: 10px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 10px;
+    transition: background var(--transition-base) ease;
+}
+
+.timeline-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+}
+
 .timeline-content {
     position: relative;
     height: 100%;
     min-width: 100%;
-    /* Width will be set dynamically via JS */
 }
 
 /* Central Axis */
@@ -129,8 +281,12 @@ body {
     top: 50%;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: var(--line-color);
+    height: 3px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        var(--line-color) 10%,
+        var(--line-color) 90%,
+        transparent 100%);
     z-index: 1;
 }
 
@@ -138,101 +294,114 @@ body {
 .timeline-item {
     position: absolute;
     box-sizing: border-box;
-    transition: left 0.2s ease, width 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+    transition: all var(--transition-base) cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 2;
     white-space: nowrap;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    cursor: pointer;
-    background-color: #fff; /* Fallback */
-    border: 2px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 13px;
     font-weight: 500;
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    letter-spacing: 0.3px;
+    animation: itemAppear 0.5s ease-out both;
+}
+
+@keyframes itemAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 .connector-line {
     position: absolute;
     width: 2px;
+    background: linear-gradient(180deg, var(--line-color), transparent);
     z-index: 1;
-    pointer-events: none; /* Let clicks pass through to background/other items */
-    transition: left 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
-}
-
-.tick {
-    transition: left 0.2s ease;
-}
-
-.tick-label {
-    transition: left 0.2s ease;
+    pointer-events: none;
+    transition: all var(--transition-base) ease;
+    opacity: 0.6;
 }
 
 .timeline-item:hover {
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-    z-index: 100 !important; /* Ensure hover is always on top */
-    transform: scale(1.05);
+    transform: scale(1.08) translateY(-2px);
+    z-index: 100 !important;
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .timeline-item.hidden {
     display: none;
 }
 
-/* Positioning handled by JS now, but basics remain */
-.timeline-item.above {
-    /* Border color will be set dynamically */
-}
-
-.timeline-item.below {
-    /* Border color will be set dynamically */
-}
-
-/* Specific Types */
+/* Event styles */
 .timeline-item.event {
-    /* Events are "pills" */
-    border-radius: 20px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-md);
 }
 
+/* Period styles */
 .timeline-item.period {
-    /* Periods are rectangles */
-    border-radius: 6px;
-    height: 34px; 
+    border-radius: 12px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff; /* Text inside colored blocks */
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-md);
 }
 
 /* Ticks */
 .tick {
     position: absolute;
     top: 50%;
-    width: 1px;
-    height: 10px;
-    background: #ccc;
+    width: 2px;
+    height: 12px;
+    background: var(--line-color);
     transform: translateY(-50%);
     pointer-events: none;
+    transition: all var(--transition-base) ease;
 }
 
 .tick-label {
     position: absolute;
     top: 50%;
-    transform: translateX(-50%) translateY(10px);
-    font-size: 10px;
-    color: #888;
+    transform: translateX(-50%) translateY(16px);
+    font-size: 11px;
+    color: var(--text-muted);
     white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all var(--transition-base) ease;
 }
 
 /* Modal */
 .modal {
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: transparent; /* Transparent overlay */
-    display: block; /* changed from flex to allow manual positioning */
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: block;
+    animation: modalFadeIn var(--transition-base) ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .modal.hidden {
@@ -240,37 +409,102 @@ body {
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px; /* Slightly smaller for popover */
+    background: var(--surface-bg);
+    backdrop-filter: blur(20px);
+    padding: 24px;
+    border-radius: 16px;
+    width: 360px;
     max-width: 90%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    position: absolute; /* Positioned relative to the viewport/modal container */
-    border: 1px solid #ddd;
+    box-shadow: var(--shadow-xl);
+    position: absolute;
+    border: 1px solid var(--surface-border);
+    animation: modalSlideIn var(--transition-slow) cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-content h2 {
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+    font-size: 20px;
+    font-weight: 700;
+    padding-right: 30px;
+}
+
+.modal-content p {
+    margin: 8px 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.modal-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-right: 8px;
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
-    color: #aaa;
+    color: var(--text-muted);
+    border-radius: 8px;
+    transition: all var(--transition-fast) ease;
+    background: rgba(51, 65, 85, 0.3);
 }
 
 .close-modal:hover {
-    color: #000;
+    color: var(--text-primary);
+    background: rgba(239, 68, 68, 0.2);
+    transform: rotate(90deg);
 }
 
-.modal-row {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+/* Responsive design */
+@media (max-width: 768px) {
+    .controls {
+        padding: 16px 20px;
+        margin: 12px;
+        gap: 16px;
+    }
+
+    .timeline-container {
+        margin: 0 12px 12px 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
 }
-.modal-label {
-    font-weight: bold;
-    display: inline-block;
-    width: 80px;
+
+/* Loading animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
