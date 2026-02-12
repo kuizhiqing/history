@@ -83,10 +83,15 @@ export class Timeline {
 
     parseData(data) {
         return data.map(item => {
+            // For periods with no end date, use current date
+            const endDate = item.end
+                ? new Date(item.end)
+                : (item.type === 'period' ? new Date() : null);
+
             return {
                 ...item,
                 startDate: new Date(item.start),
-                endDate: item.end ? new Date(item.end) : null,
+                endDate: endDate,
                 uniqueId: item.id || Math.random().toString(36).substr(2, 9)
             };
         }).sort((a, b) => a.startDate - b.startDate);
