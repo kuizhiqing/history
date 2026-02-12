@@ -202,5 +202,447 @@
     "start": "2022-11-30",
     "tags": ["cs", "ai"],
     "position": "below"
+  },
+  {
+    "id": 26,
+    "type": "period",
+    "title": "John von Neumann",
+    "start": "1903-12-28",
+    "end": "1957-02-08",
+    "tags": ["biography", "cs", "computing"],
+    "position": "above"
+  },
+  {
+    "id": 27,
+    "type": "event",
+    "title": "Von Neumann Architecture",
+    "start": "1945-06-30",
+    "tags": ["cs", "computing", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 28,
+    "type": "period",
+    "title": "Grace Hopper",
+    "start": "1906-12-09",
+    "end": "1992-01-01",
+    "tags": ["biography", "cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 29,
+    "type": "event",
+    "title": "COBOL Language",
+    "start": "1959-01-01",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 30,
+    "type": "event",
+    "title": "Transistor Invented",
+    "start": "1947-12-16",
+    "tags": ["cs", "computing", "invention"],
+    "position": "above"
+  },
+  {
+    "id": 31,
+    "type": "event",
+    "title": "Integrated Circuit",
+    "start": "1958-09-12",
+    "tags": ["cs", "computing", "invention"],
+    "position": "below"
+  },
+  {
+    "id": 32,
+    "type": "event",
+    "title": "LISP Programming Language",
+    "start": "1958-01-01",
+    "tags": ["cs", "programming", "ai"],
+    "position": "above"
+  },
+  {
+    "id": 33,
+    "type": "event",
+    "title": "Moore's Law Published",
+    "start": "1965-04-19",
+    "tags": ["cs", "computing", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 34,
+    "type": "event",
+    "title": "First Computer Mouse",
+    "start": "1964-01-01",
+    "tags": ["cs", "computing", "invention"],
+    "position": "above"
+  },
+  {
+    "id": 35,
+    "type": "event",
+    "title": "UNIX Operating System",
+    "start": "1969-01-01",
+    "tags": ["cs", "os"],
+    "position": "below"
+  },
+  {
+    "id": 36,
+    "type": "event",
+    "title": "Email Invented",
+    "start": "1971-01-01",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 37,
+    "type": "event",
+    "title": "Ethernet Developed",
+    "start": "1973-05-22",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 38,
+    "type": "event",
+    "title": "Microsoft Founded",
+    "start": "1975-04-04",
+    "tags": ["cs", "company"],
+    "position": "above"
+  },
+  {
+    "id": 39,
+    "type": "event",
+    "title": "Apple Founded",
+    "start": "1976-04-01",
+    "tags": ["cs", "company"],
+    "position": "below"
+  },
+  {
+    "id": 40,
+    "type": "event",
+    "title": "MS-DOS Released",
+    "start": "1981-08-01",
+    "tags": ["cs", "os"],
+    "position": "above"
+  },
+  {
+    "id": 41,
+    "type": "event",
+    "title": "Macintosh Released",
+    "start": "1984-01-24",
+    "tags": ["cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 42,
+    "type": "event",
+    "title": "C++ Language",
+    "start": "1985-01-01",
+    "tags": ["cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 43,
+    "type": "event",
+    "title": "Perl Programming Language",
+    "start": "1987-12-18",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 44,
+    "type": "event",
+    "title": "First Web Browser (WorldWideWeb)",
+    "start": "1990-11-13",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 45,
+    "type": "event",
+    "title": "Python Released",
+    "start": "1991-02-20",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 46,
+    "type": "event",
+    "title": "Mosaic Browser",
+    "start": "1993-04-22",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 47,
+    "type": "event",
+    "title": "Netscape Navigator",
+    "start": "1994-12-15",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 48,
+    "type": "event",
+    "title": "JavaScript Created",
+    "start": "1995-12-04",
+    "tags": ["cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 49,
+    "type": "event",
+    "title": "DVD Released",
+    "start": "1996-11-01",
+    "tags": ["cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 50,
+    "type": "event",
+    "title": "Deep Blue Defeats Kasparov",
+    "start": "1997-05-11",
+    "tags": ["cs", "ai"],
+    "position": "above"
+  },
+  {
+    "id": 51,
+    "type": "event",
+    "title": "XML 1.0 Standard",
+    "start": "1998-02-10",
+    "tags": ["cs", "web"],
+    "position": "below"
+  },
+  {
+    "id": 52,
+    "type": "event",
+    "title": "Napster Launched",
+    "start": "1999-06-01",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 53,
+    "type": "event",
+    "title": "USB 2.0 Released",
+    "start": "2000-04-01",
+    "tags": ["cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 54,
+    "type": "event",
+    "title": "iTunes Launched",
+    "start": "2001-01-09",
+    "tags": ["cs", "software"],
+    "position": "above"
+  },
+  {
+    "id": 55,
+    "type": "event",
+    "title": "BitTorrent Protocol",
+    "start": "2001-07-02",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 56,
+    "type": "event",
+    "title": "Firefox Released",
+    "start": "2004-11-09",
+    "tags": ["cs", "internet", "open-source"],
+    "position": "above"
+  },
+  {
+    "id": 57,
+    "type": "event",
+    "title": "YouTube Founded",
+    "start": "2005-02-14",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 58,
+    "type": "event",
+    "title": "Git Version Control",
+    "start": "2005-04-07",
+    "tags": ["cs", "tools", "open-source"],
+    "position": "above"
+  },
+  {
+    "id": 59,
+    "type": "event",
+    "title": "Twitter Launched",
+    "start": "2006-03-21",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 60,
+    "type": "event",
+    "title": "Kindle Released",
+    "start": "2007-11-19",
+    "tags": ["cs", "computing"],
+    "position": "above"
+  },
+  {
+    "id": 61,
+    "type": "event",
+    "title": "Android OS Released",
+    "start": "2008-09-23",
+    "tags": ["cs", "os", "mobile"],
+    "position": "below"
+  },
+  {
+    "id": 62,
+    "type": "event",
+    "title": "Chrome Browser Released",
+    "start": "2008-09-02",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 63,
+    "type": "event",
+    "title": "Node.js Released",
+    "start": "2009-05-27",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 64,
+    "type": "event",
+    "title": "iPad Released",
+    "start": "2010-04-03",
+    "tags": ["cs", "computing", "mobile"],
+    "position": "above"
+  },
+  {
+    "id": 65,
+    "type": "event",
+    "title": "Instagram Launched",
+    "start": "2010-10-06",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 66,
+    "type": "event",
+    "title": "Siri Released",
+    "start": "2011-10-04",
+    "tags": ["cs", "ai"],
+    "position": "above"
+  },
+  {
+    "id": 67,
+    "type": "event",
+    "title": "Raspberry Pi Released",
+    "start": "2012-02-29",
+    "tags": ["cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 68,
+    "type": "event",
+    "title": "Docker Released",
+    "start": "2013-03-20",
+    "tags": ["cs", "tools"],
+    "position": "above"
+  },
+  {
+    "id": 69,
+    "type": "event",
+    "title": "Swift Programming Language",
+    "start": "2014-06-02",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 70,
+    "type": "event",
+    "title": "Microsoft Edge Released",
+    "start": "2015-07-29",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 71,
+    "type": "event",
+    "title": "AlexNet (Deep Learning Breakthrough)",
+    "start": "2012-09-30",
+    "tags": ["cs", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 72,
+    "type": "event",
+    "title": "TensorFlow Released",
+    "start": "2015-11-09",
+    "tags": ["cs", "ai", "open-source"],
+    "position": "above"
+  },
+  {
+    "id": 73,
+    "type": "event",
+    "title": "Ethereum Launched",
+    "start": "2015-07-30",
+    "tags": ["cs", "blockchain"],
+    "position": "below"
+  },
+  {
+    "id": 74,
+    "type": "event",
+    "title": "Pokémon GO Released",
+    "start": "2016-07-06",
+    "tags": ["cs", "mobile"],
+    "position": "above"
+  },
+  {
+    "id": 75,
+    "type": "event",
+    "title": "GPT-1 Published",
+    "start": "2018-06-11",
+    "tags": ["cs", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 76,
+    "type": "event",
+    "title": "GPT-2 Released",
+    "start": "2019-02-14",
+    "tags": ["cs", "ai"],
+    "position": "above"
+  },
+  {
+    "id": 77,
+    "type": "event",
+    "title": "GPT-3 Released",
+    "start": "2020-06-11",
+    "tags": ["cs", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 78,
+    "type": "event",
+    "title": "GitHub Copilot Released",
+    "start": "2021-06-29",
+    "tags": ["cs", "ai", "tools"],
+    "position": "above"
+  },
+  {
+    "id": 79,
+    "type": "event",
+    "title": "Stable Diffusion Released",
+    "start": "2022-08-22",
+    "tags": ["cs", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 80,
+    "type": "event",
+    "title": "GPT-4 Released",
+    "start": "2023-03-14",
+    "tags": ["cs", "ai"],
+    "position": "above"
   }
 ]
