@@ -26,6 +26,7 @@ A modern, interactive, and extensible web-based horizontal timeline application.
 ├── data/
 │   ├── mathematics.json  # Mathematics timeline data
 │   ├── demo.json         # Computer Science timeline data
+│   ├── ai.json           # Artificial Intelligence timeline data
 │   └── index.json        # (Legacy) Index of data files
 └── src/
     ├── style.css       # Core styling
@@ -65,6 +66,7 @@ You can switch between timelines in two ways:
 2. **Using URL Parameters:** Access a specific timeline directly:
    - Mathematics (default): `http://localhost:8000/` or `http://localhost:8000/?timeline=mathematics`
    - Computer Science: `http://localhost:8000/?timeline=demo`
+   - Artificial Intelligence: `http://localhost:8000/?timeline=ai`
 
 ### Adding a New Timeline
 

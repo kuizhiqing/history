@@ -1,0 +1,665 @@
+[
+  {
+    "id": 1,
+    "type": "period",
+    "title": "Alan Turing",
+    "start": "1912-06-23",
+    "end": "1954-06-07",
+    "tags": ["biography", "ai", "theory"],
+    "position": "above"
+  },
+  {
+    "id": 2,
+    "type": "event",
+    "title": "Turing Test Proposed",
+    "start": "1950-01-01",
+    "tags": ["ai", "theory", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 3,
+    "type": "event",
+    "title": "Dartmouth Conference (AI Born)",
+    "start": "1956-07-01",
+    "tags": ["ai", "conference", "milestone"],
+    "position": "above"
+  },
+  {
+    "id": 4,
+    "type": "period",
+    "title": "John McCarthy",
+    "start": "1927-09-04",
+    "end": "2011-10-24",
+    "tags": ["biography", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 5,
+    "type": "event",
+    "title": "LISP Programming Language",
+    "start": "1958-01-01",
+    "tags": ["ai", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 6,
+    "type": "event",
+    "title": "Perceptron Algorithm",
+    "start": "1958-01-01",
+    "tags": ["ai", "ml", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 7,
+    "type": "event",
+    "title": "ELIZA Chatbot",
+    "start": "1966-01-01",
+    "tags": ["ai", "nlp"],
+    "position": "above"
+  },
+  {
+    "id": 8,
+    "type": "event",
+    "title": "Shakey the Robot",
+    "start": "1966-01-01",
+    "tags": ["ai", "robotics"],
+    "position": "below"
+  },
+  {
+    "id": 9,
+    "type": "period",
+    "title": "First AI Winter",
+    "start": "1974-01-01",
+    "end": "1980-01-01",
+    "tags": ["ai", "history"],
+    "position": "above"
+  },
+  {
+    "id": 10,
+    "type": "event",
+    "title": "Backpropagation Algorithm",
+    "start": "1986-01-01",
+    "tags": ["ai", "ml", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 11,
+    "type": "period",
+    "title": "Second AI Winter",
+    "start": "1987-01-01",
+    "end": "1993-01-01",
+    "tags": ["ai", "history"],
+    "position": "above"
+  },
+  {
+    "id": 12,
+    "type": "event",
+    "title": "TD-Gammon (Backgammon AI)",
+    "start": "1992-01-01",
+    "tags": ["ai", "games", "rl"],
+    "position": "below"
+  },
+  {
+    "id": 13,
+    "type": "event",
+    "title": "Deep Blue Defeats Kasparov",
+    "start": "1997-05-11",
+    "tags": ["ai", "games", "milestone"],
+    "position": "above"
+  },
+  {
+    "id": 14,
+    "type": "event",
+    "title": "MNIST Dataset Released",
+    "start": "1998-01-01",
+    "tags": ["ai", "ml", "dataset"],
+    "position": "below"
+  },
+  {
+    "id": 15,
+    "type": "event",
+    "title": "AIBO Robot Dog",
+    "start": "1999-06-01",
+    "tags": ["ai", "robotics"],
+    "position": "above"
+  },
+  {
+    "id": 16,
+    "type": "event",
+    "title": "Netflix Prize Competition",
+    "start": "2006-10-02",
+    "tags": ["ai", "ml", "competition"],
+    "position": "below"
+  },
+  {
+    "id": 17,
+    "type": "event",
+    "title": "ImageNet Dataset Created",
+    "start": "2009-01-01",
+    "tags": ["ai", "ml", "dataset", "cv"],
+    "position": "above"
+  },
+  {
+    "id": 18,
+    "type": "event",
+    "title": "IBM Watson Wins Jeopardy!",
+    "start": "2011-02-16",
+    "tags": ["ai", "nlp", "milestone"],
+    "position": "below"
+  },
+  {
+    "id": 19,
+    "type": "event",
+    "title": "AlexNet (Deep Learning Revolution)",
+    "start": "2012-09-30",
+    "tags": ["ai", "ml", "cv", "neural-networks"],
+    "position": "above"
+  },
+  {
+    "id": 20,
+    "type": "event",
+    "title": "Word2Vec",
+    "start": "2013-01-01",
+    "tags": ["ai", "nlp", "ml"],
+    "position": "below"
+  },
+  {
+    "id": 21,
+    "type": "event",
+    "title": "DeepMind Acquired by Google",
+    "start": "2014-01-26",
+    "tags": ["ai", "company"],
+    "position": "above"
+  },
+  {
+    "id": 22,
+    "type": "event",
+    "title": "GAN (Generative Adversarial Networks)",
+    "start": "2014-06-10",
+    "tags": ["ai", "ml", "generative"],
+    "position": "below"
+  },
+  {
+    "id": 23,
+    "type": "event",
+    "title": "ResNet Architecture",
+    "start": "2015-12-10",
+    "tags": ["ai", "ml", "cv", "neural-networks"],
+    "position": "above"
+  },
+  {
+    "id": 24,
+    "type": "event",
+    "title": "AlphaGo Defeats Lee Sedol",
+    "start": "2016-03-09",
+    "tags": ["ai", "games", "milestone", "rl"],
+    "position": "below"
+  },
+  {
+    "id": 25,
+    "type": "event",
+    "title": "TensorFlow Released",
+    "start": "2015-11-09",
+    "tags": ["ai", "ml", "framework"],
+    "position": "above"
+  },
+  {
+    "id": 26,
+    "type": "event",
+    "title": "PyTorch Released",
+    "start": "2016-09-01",
+    "tags": ["ai", "ml", "framework"],
+    "position": "below"
+  },
+  {
+    "id": 27,
+    "type": "event",
+    "title": "AlphaGo Zero",
+    "start": "2017-10-18",
+    "tags": ["ai", "games", "rl"],
+    "position": "above"
+  },
+  {
+    "id": 28,
+    "type": "event",
+    "title": "Transformer Architecture (Attention is All You Need)",
+    "start": "2017-06-12",
+    "tags": ["ai", "nlp", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 29,
+    "type": "event",
+    "title": "OpenAI Founded",
+    "start": "2015-12-11",
+    "tags": ["ai", "company"],
+    "position": "above"
+  },
+  {
+    "id": 30,
+    "type": "event",
+    "title": "BERT Model",
+    "start": "2018-10-11",
+    "tags": ["ai", "nlp", "ml"],
+    "position": "below"
+  },
+  {
+    "id": 31,
+    "type": "event",
+    "title": "GPT-1 Published",
+    "start": "2018-06-11",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 32,
+    "type": "event",
+    "title": "GPT-2 Released",
+    "start": "2019-02-14",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "below"
+  },
+  {
+    "id": 33,
+    "type": "event",
+    "title": "AlphaStar Masters StarCraft II",
+    "start": "2019-01-24",
+    "tags": ["ai", "games", "rl"],
+    "position": "above"
+  },
+  {
+    "id": 34,
+    "type": "event",
+    "title": "GPT-3 Released",
+    "start": "2020-06-11",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "below"
+  },
+  {
+    "id": 35,
+    "type": "event",
+    "title": "AlphaFold 2 (Protein Folding)",
+    "start": "2020-11-30",
+    "tags": ["ai", "science", "milestone"],
+    "position": "above"
+  },
+  {
+    "id": 36,
+    "type": "event",
+    "title": "DALL-E Announced",
+    "start": "2021-01-05",
+    "tags": ["ai", "generative", "cv"],
+    "position": "below"
+  },
+  {
+    "id": 37,
+    "type": "event",
+    "title": "GitHub Copilot Released",
+    "start": "2021-06-29",
+    "tags": ["ai", "coding", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 38,
+    "type": "event",
+    "title": "DALL-E 2 Released",
+    "start": "2022-04-06",
+    "tags": ["ai", "generative", "cv"],
+    "position": "below"
+  },
+  {
+    "id": 39,
+    "type": "event",
+    "title": "Stable Diffusion Released",
+    "start": "2022-08-22",
+    "tags": ["ai", "generative", "cv", "open-source"],
+    "position": "above"
+  },
+  {
+    "id": 40,
+    "type": "event",
+    "title": "Midjourney Beta",
+    "start": "2022-07-12",
+    "tags": ["ai", "generative", "cv"],
+    "position": "below"
+  },
+  {
+    "id": 41,
+    "type": "event",
+    "title": "ChatGPT Released",
+    "start": "2022-11-30",
+    "tags": ["ai", "nlp", "llm", "milestone"],
+    "position": "above"
+  },
+  {
+    "id": 42,
+    "type": "event",
+    "title": "GPT-4 Released",
+    "start": "2023-03-14",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "below"
+  },
+  {
+    "id": 43,
+    "type": "event",
+    "title": "Google Bard Launched",
+    "start": "2023-03-21",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 44,
+    "type": "event",
+    "title": "LLaMA Released",
+    "start": "2023-02-24",
+    "tags": ["ai", "nlp", "llm", "open-source"],
+    "position": "below"
+  },
+  {
+    "id": 45,
+    "type": "event",
+    "title": "Claude Released",
+    "start": "2023-03-14",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 46,
+    "type": "period",
+    "title": "Geoffrey Hinton",
+    "start": "1947-12-06",
+    "end": null,
+    "tags": ["biography", "ai", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 47,
+    "type": "period",
+    "title": "Yann LeCun",
+    "start": "1960-07-08",
+    "end": null,
+    "tags": ["biography", "ai", "cv"],
+    "position": "above"
+  },
+  {
+    "id": 48,
+    "type": "period",
+    "title": "Yoshua Bengio",
+    "start": "1964-03-05",
+    "end": null,
+    "tags": ["biography", "ai", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 49,
+    "type": "event",
+    "title": "Turing Award to Deep Learning Pioneers",
+    "start": "2019-03-27",
+    "tags": ["ai", "honor", "neural-networks"],
+    "position": "above"
+  },
+  {
+    "id": 50,
+    "type": "event",
+    "title": "LeNet-5 (Convolutional Neural Network)",
+    "start": "1998-01-01",
+    "tags": ["ai", "ml", "cv", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 51,
+    "type": "event",
+    "title": "LSTM Networks",
+    "start": "1997-01-01",
+    "tags": ["ai", "ml", "neural-networks"],
+    "position": "above"
+  },
+  {
+    "id": 52,
+    "type": "event",
+    "title": "Dropout Technique",
+    "start": "2012-01-01",
+    "tags": ["ai", "ml", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 53,
+    "type": "event",
+    "title": "Batch Normalization",
+    "start": "2015-02-11",
+    "tags": ["ai", "ml", "neural-networks"],
+    "position": "above"
+  },
+  {
+    "id": 54,
+    "type": "event",
+    "title": "Seq2Seq Models",
+    "start": "2014-09-10",
+    "tags": ["ai", "nlp", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 55,
+    "type": "event",
+    "title": "Neural Machine Translation (Google)",
+    "start": "2016-09-27",
+    "tags": ["ai", "nlp"],
+    "position": "above"
+  },
+  {
+    "id": 56,
+    "type": "event",
+    "title": "OpenAI Five (Dota 2)",
+    "start": "2018-06-25",
+    "tags": ["ai", "games", "rl"],
+    "position": "below"
+  },
+  {
+    "id": 57,
+    "type": "event",
+    "title": "CLIP Model",
+    "start": "2021-01-05",
+    "tags": ["ai", "cv", "nlp"],
+    "position": "above"
+  },
+  {
+    "id": 58,
+    "type": "event",
+    "title": "Codex (AI Code Generation)",
+    "start": "2021-08-10",
+    "tags": ["ai", "coding", "llm"],
+    "position": "below"
+  },
+  {
+    "id": 59,
+    "type": "event",
+    "title": "InstructGPT",
+    "start": "2022-03-04",
+    "tags": ["ai", "nlp", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 60,
+    "type": "event",
+    "title": "Whisper (Speech Recognition)",
+    "start": "2022-09-21",
+    "tags": ["ai", "speech", "audio"],
+    "position": "below"
+  },
+  {
+    "id": 61,
+    "type": "event",
+    "title": "Point-E (3D Generation)",
+    "start": "2022-12-16",
+    "tags": ["ai", "generative", "3d"],
+    "position": "above"
+  },
+  {
+    "id": 62,
+    "type": "event",
+    "title": "GPT-4 Vision",
+    "start": "2023-09-25",
+    "tags": ["ai", "cv", "llm"],
+    "position": "below"
+  },
+  {
+    "id": 63,
+    "type": "event",
+    "title": "Gemini Released",
+    "start": "2023-12-06",
+    "tags": ["ai", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 64,
+    "type": "event",
+    "title": "Sora (Video Generation)",
+    "start": "2024-02-15",
+    "tags": ["ai", "generative", "video"],
+    "position": "below"
+  },
+  {
+    "id": 65,
+    "type": "event",
+    "title": "Claude 3 Released",
+    "start": "2024-03-04",
+    "tags": ["ai", "llm"],
+    "position": "above"
+  },
+  {
+    "id": 66,
+    "type": "event",
+    "title": "VGG Neural Network",
+    "start": "2014-09-04",
+    "tags": ["ai", "cv", "neural-networks"],
+    "position": "below"
+  },
+  {
+    "id": 67,
+    "type": "event",
+    "title": "Expert Systems Era Begins",
+    "start": "1980-01-01",
+    "tags": ["ai", "history"],
+    "position": "above"
+  },
+  {
+    "id": 68,
+    "type": "event",
+    "title": "MYCIN Expert System",
+    "start": "1976-01-01",
+    "tags": ["ai", "medicine"],
+    "position": "below"
+  },
+  {
+    "id": 69,
+    "type": "event",
+    "title": "Fifth Generation Computer Project (Japan)",
+    "start": "1982-01-01",
+    "tags": ["ai", "history"],
+    "position": "above"
+  },
+  {
+    "id": 70,
+    "type": "event",
+    "title": "Bayesian Networks",
+    "start": "1985-01-01",
+    "tags": ["ai", "ml", "theory"],
+    "position": "below"
+  },
+  {
+    "id": 71,
+    "type": "event",
+    "title": "Support Vector Machines (SVM)",
+    "start": "1995-01-01",
+    "tags": ["ai", "ml"],
+    "position": "above"
+  },
+  {
+    "id": 72,
+    "type": "event",
+    "title": "Random Forest Algorithm",
+    "start": "2001-01-01",
+    "tags": ["ai", "ml"],
+    "position": "below"
+  },
+  {
+    "id": 73,
+    "type": "event",
+    "title": "Gradient Boosting Machines",
+    "start": "1999-01-01",
+    "tags": ["ai", "ml"],
+    "position": "above"
+  },
+  {
+    "id": 74,
+    "type": "event",
+    "title": "Reinforcement Learning Book (Sutton & Barto)",
+    "start": "1998-03-01",
+    "tags": ["ai", "rl", "publication"],
+    "position": "below"
+  },
+  {
+    "id": 75,
+    "type": "event",
+    "title": "DQN (Deep Q-Network)",
+    "start": "2013-12-19",
+    "tags": ["ai", "rl", "games"],
+    "position": "above"
+  },
+  {
+    "id": 76,
+    "type": "event",
+    "title": "ELMo (Embeddings from Language Models)",
+    "start": "2018-02-15",
+    "tags": ["ai", "nlp"],
+    "position": "below"
+  },
+  {
+    "id": 77,
+    "type": "event",
+    "title": "GPT-3.5 (ChatGPT base model)",
+    "start": "2022-03-15",
+    "tags": ["ai", "llm", "nlp"],
+    "position": "above"
+  },
+  {
+    "id": 78,
+    "type": "event",
+    "title": "AlphaCode (Competitive Programming)",
+    "start": "2022-02-02",
+    "tags": ["ai", "coding"],
+    "position": "below"
+  },
+  {
+    "id": 79,
+    "type": "event",
+    "title": "Gato (Generalist Agent)",
+    "start": "2022-05-12",
+    "tags": ["ai", "rl"],
+    "position": "above"
+  },
+  {
+    "id": 80,
+    "type": "event",
+    "title": "LLaMA 2 Released",
+    "start": "2023-07-18",
+    "tags": ["ai", "llm", "open-source"],
+    "position": "below"
+  },
+  {
+    "id": 81,
+    "type": "event",
+    "title": "Mistral AI Founded",
+    "start": "2023-05-01",
+    "tags": ["ai", "company"],
+    "position": "above"
+  },
+  {
+    "id": 82,
+    "type": "event",
+    "title": "Claude 3.5 Sonnet Released",
+    "start": "2024-06-20",
+    "tags": ["ai", "llm"],
+    "position": "below"
+  }
+]
