@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "type": "period",
+    "title": "Charles Babbage",
+    "start": "1791-12-26",
+    "end": "1871-10-18",
+    "tags": ["biography", "cs", "computing"],
+    "position": "above"
+  },
+  {
+    "id": 2,
+    "type": "event",
+    "title": "Analytical Engine Design",
+    "start": "1837-01-01",
+    "tags": ["cs", "computing", "invention"],
+    "position": "below"
+  },
+  {
+    "id": 3,
+    "type": "period",
+    "title": "Ada Lovelace",
+    "start": "1815-12-10",
+    "end": "1852-11-27",
+    "tags": ["biography", "cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 4,
+    "type": "event",
+    "title": "First Computer Algorithm",
+    "start": "1843-01-01",
+    "tags": ["cs", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 5,
+    "type": "period",
+    "title": "Alan Turing",
+    "start": "1912-06-23",
+    "end": "1954-06-07",
+    "tags": ["biography", "cs", "ai"],
+    "position": "below"
+  },
+  {
+    "id": 6,
+    "type": "event",
+    "title": "Turing Machine Concept",
+    "start": "1936-01-01",
+    "tags": ["cs", "publication"],
+    "position": "above"
+  },
+  {
+    "id": 7,
+    "type": "event",
+    "title": "ENIAC (First Electronic Computer)",
+    "start": "1945-02-15",
+    "tags": ["cs", "computing", "invention"],
+    "position": "below"
+  },
+  {
+    "id": 8,
+    "type": "event",
+    "title": "FORTRAN Released",
+    "start": "1957-01-01",
+    "tags": ["cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 9,
+    "type": "event",
+    "title": "ARPANET First Message",
+    "start": "1969-10-29",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 10,
+    "type": "period",
+    "title": "Dennis Ritchie",
+    "start": "1941-09-09",
+    "end": "2011-10-12",
+    "tags": ["biography", "cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 11,
+    "type": "event",
+    "title": "C Programming Language",
+    "start": "1972-01-01",
+    "tags": ["cs", "programming"],
+    "position": "below"
+  },
+  {
+    "id": 12,
+    "type": "event",
+    "title": "TCP/IP Protocol",
+    "start": "1974-01-01",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 13,
+    "type": "event",
+    "title": "Apple II Released",
+    "start": "1977-04-17",
+    "tags": ["cs", "computing"],
+    "position": "below"
+  },
+  {
+    "id": 14,
+    "type": "event",
+    "title": "IBM PC Released",
+    "start": "1981-08-12",
+    "tags": ["cs", "computing"],
+    "position": "above"
+  },
+  {
+    "id": 15,
+    "type": "event",
+    "title": "GNU Project Started",
+    "start": "1983-09-27",
+    "tags": ["cs", "open-source"],
+    "position": "below"
+  },
+  {
+    "id": 16,
+    "type": "event",
+    "title": "World Wide Web Invented",
+    "start": "1989-03-12",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 17,
+    "type": "event",
+    "title": "Linux Kernel Released",
+    "start": "1991-09-17",
+    "tags": ["cs", "open-source"],
+    "position": "below"
+  },
+  {
+    "id": 18,
+    "type": "event",
+    "title": "Java Released",
+    "start": "1995-05-23",
+    "tags": ["cs", "programming"],
+    "position": "above"
+  },
+  {
+    "id": 19,
+    "type": "event",
+    "title": "Google Founded",
+    "start": "1998-09-04",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 20,
+    "type": "event",
+    "title": "Wikipedia Launched",
+    "start": "2001-01-15",
+    "tags": ["cs", "internet"],
+    "position": "above"
+  },
+  {
+    "id": 21,
+    "type": "event",
+    "title": "Facebook Founded",
+    "start": "2004-02-04",
+    "tags": ["cs", "internet"],
+    "position": "below"
+  },
+  {
+    "id": 22,
+    "type": "event",
+    "title": "iPhone Released",
+    "start": "2007-06-29",
+    "tags": ["cs", "computing"],
+    "position": "above"
+  },
+  {
+    "id": 23,
+    "type": "event",
+    "title": "Bitcoin Whitepaper",
+    "start": "2008-10-31",
+    "tags": ["cs", "blockchain"],
+    "position": "below"
+  },
+  {
+    "id": 24,
+    "type": "event",
+    "title": "AlphaGo Defeats Lee Sedol",
+    "start": "2016-03-09",
+    "tags": ["cs", "ai"],
+    "position": "above"
+  },
+  {
+    "id": 25,
+    "type": "event",
+    "title": "ChatGPT Released",
+    "start": "2022-11-30",
+    "tags": ["cs", "ai"],
+    "position": "below"
+  }
+]

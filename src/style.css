@@ -28,6 +28,40 @@ body {
     margin-bottom: 20px;
     z-index: 10;
     flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timeline-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timeline-selector label {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.timeline-selector select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.timeline-selector select:hover {
+    border-color: #999;
+}
+
+.timeline-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
 }
 
 .zoom-controls button {

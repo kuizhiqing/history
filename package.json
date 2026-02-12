@@ -1,0 +1,16 @@
+{
+  "name": "history-timeline",
+  "version": "1.0.0",
+  "description": "Interactive historical timeline visualization",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "timeline",
+    "history",
+    "visualization"
+  ],
+  "author": "",
+  "license": "MIT"
+}

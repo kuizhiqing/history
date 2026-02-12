@@ -1,35 +1,36 @@
 import { Timeline } from './timeline.js';
 
-// Load data from multiple JSON files
-async function loadAllData() {
+// Get timeline parameter from URL or default to 'mathematics'
+function getTimelineParam() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('timeline') || 'mathematics';
+}
+
+// Load data from a specific timeline JSON file
+async function loadTimelineData(timelineName) {
     try {
-        // 1. Read the index to know which files to load
-        const indexResponse = await fetch('data/index.json');
-        if (!indexResponse.ok) {
-            throw new Error(`Failed to load index.json: ${indexResponse.statusText}`);
+        const response = await fetch(`data/${timelineName}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${timelineName}.json: ${response.statusText}`);
         }
-        const index = await indexResponse.json();
-
-        // 2. Load each file in parallel
-        const filePromises = index.files.map(file =>
-            fetch(`data/${file}`).then(res => res.json())
-        );
-
-        const fileContents = await Promise.all(filePromises);
-
-        // 3. Merge all items into a single array
-        const allItems = fileContents.reduce((acc, items) => acc.concat(items), []);
-
-        console.log(`Loaded ${allItems.length} items from ${index.files.length} files.`);
-        return allItems;
+        const items = await response.json();
+        console.log(`Loaded ${items.length} items from ${timelineName}.json`);
+        return items;
     } catch (err) {
-        console.error('Failed to load timeline data:', err);
+        console.error(`Failed to load timeline data for '${timelineName}':`, err);
+        // Fallback to mathematics if the requested timeline doesn't exist
+        if (timelineName !== 'mathematics') {
+            console.log('Falling back to mathematics timeline...');
+            return loadTimelineData('mathematics');
+        }
         return [];
     }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const items = await loadAllData();
+    const timelineName = getTimelineParam();
+    document.title = `${timelineName.charAt(0).toUpperCase() + timelineName.slice(1)} Timeline`;
+    const items = await loadTimelineData(timelineName);
     
     // Modal elements
     const modal = document.querySelector('#details-modal');
@@ -106,6 +107,21 @@ document.addEventListener('DOMContentLoaded', async () => {
             label.appendChild(checkbox);
             label.appendChild(document.createTextNode(` ${tag}`));
             filterContainer.appendChild(label);
+        });
+    }
+
+    // Timeline selector dropdown
+    const timelineSelect = document.getElementById('timeline-select');
+    if (timelineSelect) {
+        // Set the current value based on URL parameter
+        timelineSelect.value = timelineName;
+
+        // Handle timeline switching
+        timelineSelect.addEventListener('change', (e) => {
+            const newTimeline = e.target.value;
+            const url = new URL(window.location);
+            url.searchParams.set('timeline', newTimeline);
+            window.location.href = url.toString();
         });
     }
 
